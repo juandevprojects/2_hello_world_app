@@ -1,4 +1,4 @@
-name: Azure Python 3.9
+name: Github Python 3.9
 on: [push]
 jobs:
   build:

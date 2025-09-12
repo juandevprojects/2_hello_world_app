@@ -1,4 +1,4 @@
-name: Azure Python 3.10.18 3.12.11 3.13.5
+name: Github Python 3.10.18 3.12.11 3.13.5
 on: [push]
 jobs:
   build:
