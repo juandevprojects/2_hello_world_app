@@ -1,18 +1,18 @@
-# name: AWS Code Build Example Python 3.13
-# on: [push]
-# jobs:
-#   Hello-World-Job:
-#     runs-on:
-#       - codebuild-MLOpsCodeBuildGithub-${{ github.run_id }}-${{ github.run_attempt }}
-#     steps:
-#       - run: echo "Hello World!"
-#       - name: List available Python versions
-#         run: |
-#           echo "Available Python versions:"
-#           ls /usr/bin/python* || which -a python || pyenv versions || echo "No Python versions found"
+name: AWS Code Build Hello World App
+on: [push]
+jobs:
+  Hello-World-app-Job:
+    runs-on:
+      - codebuild-2_hello_world_appCodeBuildGithub-${{ github.run_id }}-${{ github.run_attempt }}
+    steps:
+      - run: echo "Hello World App!"
+      - name: List available Python versions
+        run: |
+          echo "Available Python versions:"
+          ls /usr/bin/python* || which -a python || pyenv versions || echo "No Python versions found"
 #   build:
 #     runs-on:
-#       - codebuild-MLOpsCodeBuildGithub-${{ github.run_id }}-${{ github.run_attempt }}
+#       - codebuild-2_hello_world_appCodeBuildGithub-${{ github.run_id }}-${{ github.run_attempt }}
 #     steps:
 #     - uses: actions/checkout@v4
 #     - name: Set up Python 3.13
@@ -33,3 +33,5 @@
 #         make format
 
 #         pendiente que puedas ejecutar esta compilación con un python desde un ven no desde root. ¿Cómo se configura?
+
+
