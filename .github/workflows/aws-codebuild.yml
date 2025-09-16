@@ -5,7 +5,7 @@ jobs:
     runs-on:
       - codebuild-2_hello_world_appCodeBuildGithub-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
-      - run: echo "Hello World App!"
+      - run: echo "Hello World App!!"
       - name: List available Python versions
         run: |
           echo "Available Python versions:"
