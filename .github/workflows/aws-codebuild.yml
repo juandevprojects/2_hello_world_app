@@ -3,7 +3,7 @@ on: [push]
 jobs:
   Hello-World-app-Job:
     runs-on:
-      - codebuild-2_hello_world_app_CodeBuildGithub-${{ github.run_id }}-${{ github.run_attempt }}
+      - codebuild-2-hello_world_app_CodeBuildGithub-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - run: echo "Hello World App!!"
       - name: List available Python versions
@@ -12,7 +12,7 @@ jobs:
           ls /usr/bin/python* || which -a python || pyenv versions || echo "No Python versions found"
   build:
     runs-on:
-      - codebuild-2_hello_world_app_CodeBuildGithub-${{ github.run_id }}-${{ github.run_attempt }}
+      - codebuild-2-hello_world_app_CodeBuildGithub-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python 3.13
