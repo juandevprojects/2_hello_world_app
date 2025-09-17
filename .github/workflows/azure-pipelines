@@ -1,0 +1,39 @@
+TODO: DEBES HACER ESTE DESPLIEGUE EN UN RUNNER DE AZURE DEVOPS
+
+# name: Azure Hello World App
+# on: [push]
+# jobs:
+#   Hello-World-app-Job:
+#     runs-on:
+#       - codebuild-2-hello_world_app_CodeBuildGithub-${{ github.run_id }}-${{ github.run_attempt }}
+#     steps:
+#       - run: echo "Hello World App!!"
+#       - name: List available Python versions
+#         run: |
+#           echo "Available Python versions:"
+#           ls /usr/bin/python* || which -a python || pyenv versions || echo "No Python versions found"
+#   build:
+#     runs-on:
+#       - codebuild-2-hello_world_app_CodeBuildGithub-${{ github.run_id }}-${{ github.run_attempt }}
+#     steps:
+#     - uses: actions/checkout@v4
+#     - name: Set up Python 3.13
+#       uses: actions/setup-python@v5
+#       with:
+#         python-version: 'pypy3.10'
+#     - name: Install dependencies
+#       run: |
+#         make install
+#     - name: Lint
+#       run: |
+#         make lint
+#     - name: Test
+#       run: |
+#         make test
+#     - name: Format
+#       run: |
+#         make format
+
+
+
+
